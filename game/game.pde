@@ -1,5 +1,6 @@
 Button start, settings, returnToStart, toggleMusic, toggleKeys;
 Boolean isMainMenu = true, isPlaying = false, isSettings = false;
+Character steve;
 
 void setup() {
   size(1000,700);
@@ -8,6 +9,7 @@ void setup() {
   returnToStart = new Button(width/2 - 100, height/2 + 100, "Back", false);
   toggleMusic = new Button(width/2 - 100, height/2 - 100, "Music On", true);
   toggleKeys = new Button(width/2 - 100, height/2, "Use WASD", true);
+  steve = new Character(#FFCC00);
 }
 
 void draw() {
@@ -20,6 +22,9 @@ void draw() {
     toggleMusic.display();
     toggleKeys.display();
     returnToStart.display();
+  }
+  else if (isPlaying == true) {
+    steve.display();
   }
 }
 
